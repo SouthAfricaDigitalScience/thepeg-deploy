@@ -27,9 +27,8 @@ module add fastjet/3.2.1-gcc-${GCC_VERSION}
 # module add  rivet
 
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
-make check
+#make check
 
-echo $?
 
 make install
 mkdir -p ${REPO_DIR}

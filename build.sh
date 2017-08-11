@@ -22,7 +22,7 @@ module add  gcc/${GCC_VERSION}
 # Needs hepmc 2, it seems
 # module add hepmc/3.0.0-gcc-${GCC_VERSION}
 module add boost/1.63.0-gcc-$GCC_VERSION-mpi-1.8.8
-# module add lhapdf
+module add lhapdf/6.2.0-gcc-${GCC_VERSION}
 module add fastjet/3.2.1-gcc-${GCC_VERSION}
 # module add  rivet
 
