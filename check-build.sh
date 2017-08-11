@@ -20,7 +20,7 @@ module add zlib
 module add gsl
 module add  gcc/${GCC_VERSION}
 # Needs hepmc 2, it seems
-# module add hepmc/3.0.0-gcc-${GCC_VERSION}
+module add hepmc/2.06.09-gcc-${GCC_VERSION}
 module add boost/1.63.0-gcc-$GCC_VERSION-mpi-1.8.8
 # module add lhapdf
 module add fastjet/3.2.1-gcc-${GCC_VERSION}
@@ -44,11 +44,11 @@ proc ModulesHelp { } {
 }
 
 module-whatis   "$NAME $VERSION."
-setenv       FASTJET_VERSION       $VERSION
-setenv       FASTJET_DIR           /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-${GCC_VERSION}
-prepend-path LD_LIBRARY_PATH   $::env(FASTJET_DIR)/lib
-setenv CFLAGS            "-I$::env(FASTJET_DIR)/include $CFLAGS"
-setenv LDFLAGS           "-L$::env(FASTJET_DIR)/lib $LDFLAGS"
+setenv       THEPEG_VERSION       $VERSION
+setenv       THEPEG_DIR           /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION-gcc-${GCC_VERSION}
+prepend-path LD_LIBRARY_PATH   $::env(THEPEG_DIR)/lib
+setenv CFLAGS            "-I$::env(THEPEG_DIR)/include $CFLAGS"
+setenv LDFLAGS           "-L$::env(THEPEG_DIR)/lib $LDFLAGS"
 MODULE_FILE
 ) > modules/$VERSION-gcc-${GCC_VERSION}
 

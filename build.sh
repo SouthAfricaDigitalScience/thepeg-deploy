@@ -20,7 +20,7 @@ module add zlib
 module add gsl
 module add  gcc/${GCC_VERSION}
 # Needs hepmc 2, it seems
-# module add hepmc/3.0.0-gcc-${GCC_VERSION}
+module add hepmc/2.06.09-gcc-${GCC_VERSION}
 module add boost/1.63.0-gcc-$GCC_VERSION-mpi-1.8.8
 module add lhapdf/6.2.0-gcc-${GCC_VERSION}
 module add fastjet/3.2.1-gcc-${GCC_VERSION}
@@ -56,5 +56,6 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 --with-gsl=${GSL_DIR} \
 --with-boost=${BOOST_DIR} \
 --with-fastjet=${FASTJET_DIR} \
+--with-lhapdf=${LHAPDF_DIR} \
 --with-zlib=${ZLIB_DIR}
 make
